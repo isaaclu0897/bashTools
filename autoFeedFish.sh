@@ -29,9 +29,7 @@ xdotool mousemove 800 400
 sleep 0.5
 
 # feed
-xdotool click 1
-sleep 0.5
-xdotool click 1
+xdotool click --repeat 3 --delay 300 1
 sleep 5
 
 # ===== bowl 2 =====
@@ -43,9 +41,7 @@ xdotool mousemove 800 400
 sleep 0.5
 
 # feed
-xdotool click 1
-sleep 0.5
-xdotool click 1
+xdotool click --repeat 3 --delay 300 1
 sleep 5
 
 # ===== bowl 3 =====
@@ -57,10 +53,7 @@ xdotool mousemove 800 400
 sleep 0.5
 
 # feed
-xdotool click 1
-sleep 0.5
-xdotool click 1
-sleep 5
+xdotool click --repeat 3 --delay 300 1
 
 # end
 xdotool mousemove 1055 715 click 1
