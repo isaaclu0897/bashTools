@@ -1,62 +1,70 @@
 #!/bin/bash
 
+#sleep 5
+
+xdotool key space
+
+xdotool key Escape
+#sleep 3
+
 # search window
 WID=`xdotool search --name "Google Chrome"`
 
 # activate window
 xdotool windowactivate $WID
-sleep 0.5
 
 # open happyfishbowl
 xdotool mousemove 90 40 click 1
-sleep 1
 
-# open feed
+# open feeder selection tab
 xdotool mousemove 960 710 click 1
 sleep 1
 
-# select feed
-xdotool mousemove 900 580 click 1
-# xdotool mousemove 1025 575 click 1
-sleep 1
+# select feeder
+# xdotool mousemove 860 580 click 1
+# xdotool mousemove 900 580 click 1
+
+# xdotool mousemove 940 580 click 1
+# xdotool mousemove 980 580 click 1
+
+# xdotool mousemove 1020 580 click 1
+# xdotool mousemove 1060 575 click 1
 
 # ===== bowl 1 =====
 xdotool mousemove 750 300 click 1
-sleep 1
 
 # go to feed place
 xdotool mousemove 800 400
-sleep 0.5
 
 # feed
-xdotool click --repeat 3 --delay 300 1
-sleep 5
+xdotool click --repeat 2 --delay 300 1
+xdotool mousemove 300 500
+sleep 20
 
 # ===== bowl 2 =====
 xdotool mousemove 715 300 click 1
-sleep 1
 
 # go to feed place
 xdotool mousemove 800 400
-sleep 0.5
 
 # feed
-xdotool click --repeat 3 --delay 300 1
-sleep 5
+xdotool click --repeat 2 --delay 300 1
+xdotool mousemove 300 500
+sleep 15
 
 # ===== bowl 3 =====
 xdotool mousemove 690 300 click 1
-sleep 1
 
 # go to feed place
 xdotool mousemove 800 400
-sleep 0.5
 
 # feed
-xdotool click --repeat 3 --delay 300 1
+xdotool click --repeat 2 --delay 300 1
+xdotool mousemove 300 500
 
 # end
-xdotool mousemove 1055 715 click 1
-sleep 0.5
-xdotool mousemove 1030 690 click 1
-sleep 0.5
+xdotool mousemove 1058 735 click 1
+
+# xdotool mousemove 1055 715 click 1
+# xdotool mousemove 1030 690 click 1
+
