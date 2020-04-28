@@ -2,8 +2,8 @@
 
 select_feeder(){
     # open feeder selection tab
-    xdotool mousemove --sync 960 710 click 1
-    sleep 0.5 # wait for the tab to be opened
+    xdotool mousemove --sync 960 710 click 1;
+    sleep 0.5; # wait for the tab to be opened
     
     # select feeder
     case $1 in
@@ -17,8 +17,8 @@ select_feeder(){
 }
 
 feed_fish(){
-    xdotool mousemove_relative --sync 100 100 click --repeat $1 --delay 300 1
-    xdotool mousemove_relative -- -100 -100 # cusor exit bowl
+    xdotool mousemove_relative --sync 100 100 click --repeat $1 --delay 300 1;
+    xdotool mousemove_relative -- -100 -100; # cusor exit bowl
 }
 
 change_fish_bowl(){
@@ -29,40 +29,46 @@ change_fish_bowl(){
         4) xdotool mousemove --sync 750 300 click 1;;
         5) xdotool mousemove --sync 780 300 click 1;;
     esac
+
+    sleep 0.5;
+}
+
+feed_bowl(){
+    # feed_bowl bowl food sleep
+    change_fish_bowl $1;
+    feed_fish $2;
+    sleep $3;
 }
 
 #sleep 5
 
-xdotool key space
+xdotool key space;
 
-xdotool key Escape
+xdotool key Escape;
 #sleep 3
 
 # search window
-WID=`xdotool search --name "Google Chrome"`
+WID=`xdotool search --name "Google Chrome"`;
 
 # activate window
-xdotool windowactivate --sync $WID
+xdotool windowactivate --sync $WID;
 
 # open happyfishbowl
-xdotool mousemove --sync 90 40 click 1
+xdotool mousemove --sync 90 40 click 1;
 
-select_feeder 1
+select_feeder 1;
 
-# ===== bowl 1 =====
-change_fish_bowl 1
-feed_fish 3
-sleep 20
+# ===== feed bowl =====
+feed_bowl 1 3 5;
 
-# ===== bowl 2 =====
-change_fish_bowl 2
-feed_fish 3
-sleep 15
+feed_bowl 2 3 5;
 
-# ===== bowl 3 =====
-change_fish_bowl 3
-feed_fish 3
+feed_bowl 3 3 5;
+
+feed_bowl 4 3 5;
+
+feed_bowl 5 3 0;
 
 # end
-xdotool mousemove --sync 1055 735 click 1
+xdotool mousemove --sync 1055 735 click 1;
 
