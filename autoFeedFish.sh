@@ -40,13 +40,6 @@ feed_bowl(){
     sleep $3;
 }
 
-#sleep 5
-
-xdotool key space;
-
-xdotool key Escape;
-#sleep 3
-
 # search window
 WID=`xdotool search --name "Google Chrome"`;
 
@@ -54,20 +47,33 @@ WID=`xdotool search --name "Google Chrome"`;
 xdotool windowactivate --sync $WID;
 
 # open happyfishbowl
-xdotool mousemove --sync 90 40 click 1;
+xdotool mousemove --sync 200 40 click 1;
 
-select_feeder 1;
+xdotool mousemove_relative --sync 200 200 click 1 key F5;
+sleep 20;
+
+xdotool mousemove --sync 720 735 click 1; sleep 1;
+xdotool mousemove --sync 1180 355 click 1; sleep 1;
+
+xdotool mousemove --sync 1140 385 click 1; sleep 1;
+
+xdotool mousemove --sync 720 735 click 1; sleep 1;
+xdotool mousemove --sync 1180 355 click 1; sleep 1;
+
+select_feeder 2;
 
 # ===== feed bowl =====
-feed_bowl 1 3 5;
+feed_bowl 1 5 20;
 
-feed_bowl 2 3 5;
+feed_bowl 2 5 20;
 
-feed_bowl 3 3 5;
+feed_bowl 3 5 30;
 
-feed_bowl 4 3 5;
+feed_bowl 4 5 20;
 
-feed_bowl 5 3 0;
+feed_bowl 5 5 40;
+
+change_fish_bowl 1;
 
 # end
 xdotool mousemove --sync 1055 735 click 1;
