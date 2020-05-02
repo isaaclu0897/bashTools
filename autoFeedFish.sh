@@ -46,11 +46,16 @@ WID=`xdotool search --name "Google Chrome"`;
 # activate window
 xdotool windowactivate --sync $WID;
 
-# open happyfishbowl
-xdotool mousemove --sync 200 40 click 1;
+# switch first tab
+xdotool key ctrl+t;
 
-xdotool mousemove_relative --sync 200 200 click 1 key F5;
-sleep 20;
+xdotool key ctrl+l;
+
+xdotool type https://apps.facebook.com/happyfishbowl/;
+
+xdotool key Return;
+
+sleep 15;
 
 xdotool mousemove --sync 720 735 click 1; sleep 1;
 xdotool mousemove --sync 1180 355 click 1; sleep 1;
@@ -63,18 +68,16 @@ xdotool mousemove --sync 1180 355 click 1; sleep 1;
 select_feeder 2;
 
 # ===== feed bowl =====
-feed_bowl 1 5 20;
+feed_bowl 1 5 10;
 
-feed_bowl 2 5 20;
+feed_bowl 2 5 10;
 
-feed_bowl 3 5 30;
+feed_bowl 3 5 20;
 
 feed_bowl 4 5 20;
 
-feed_bowl 5 5 40;
-
-change_fish_bowl 1;
+feed_bowl 5 5 25;
 
 # end
-xdotool mousemove --sync 1055 735 click 1;
+xdotool key ctrl+w;
 
