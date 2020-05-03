@@ -78,6 +78,13 @@ feed_bowl 4 5 20;
 
 feed_bowl 5 5 25;
 
+# rare fish
+xdotool mousemove --sync 915 300 click 1; sleep 1;
+xdotool mousemove --sync 850 350 click 1; sleep 1;
+xdotool mousemove --sync 555 500 click 1; sleep 1;
+xdotool mousemove --sync 900 425 click 1; sleep 1;
+xdotool mousemove --sync 750 700 click 1; sleep 1;
+
 # end
 xdotool key ctrl+w;
 
