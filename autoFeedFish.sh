@@ -54,6 +54,8 @@ xdotool key ctrl+l;
 xdotool type https://apps.facebook.com/happyfishbowl/;
 
 xdotool key Return;
+xdotool key Return;
+
 
 sleep 15;
 
